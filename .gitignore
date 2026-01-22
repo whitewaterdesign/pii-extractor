@@ -1,0 +1,6 @@
+data/**
+!data/.gitkeep
+!data/*.md
+.idea
+**/*.safetensors
+**/pytorch_model.bin
