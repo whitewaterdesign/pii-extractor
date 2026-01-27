@@ -1,0 +1,497 @@
+[
+  {
+    "timestamp": "2026-01-24T10:10:00Z",
+    "level": "INFO",
+    "service": {"name": "api-gateway", "version": "1.0.0", "environment": "prod"},
+    "message": "Health check ok"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:01Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Emily Brown"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:02Z",
+    "level": "DEBUG",
+    "service": {"name": "orders-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Order processing completed"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:03Z",
+    "level": "INFO",
+    "service": {"name": "auth-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Login successful for james.wilson@mail.com"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:04Z",
+    "level": "INFO",
+    "service": {"name": "cache-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Cache refreshed"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:05Z",
+    "level": "WARN",
+    "service": {"name": "orders-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Upstream timeout while fetching orders"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:06Z",
+    "level": "INFO",
+    "service": {"name": "support-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Callback requested from +44 7701 889900"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:07Z",
+    "level": "DEBUG",
+    "service": {"name": "metrics-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Metrics batch flushed"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:08Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Aisha Khan"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:09Z",
+    "level": "INFO",
+    "service": {"name": "api-gateway", "version": "1.0.0", "environment": "prod"},
+    "message": "Request completed"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:10Z",
+    "level": "DEBUG",
+    "service": {"name": "feature-flags", "version": "1.0.0", "environment": "prod"},
+    "message": "Flags evaluated"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:11Z",
+    "level": "INFO",
+    "service": {"name": "address-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Address lookup completed for postcode M14 6AB"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:12Z",
+    "level": "INFO",
+    "service": {"name": "config-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Configuration loaded"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:13Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Daniel Taylor"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:14Z",
+    "level": "WARN",
+    "service": {"name": "records-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Record not found for NHS number 485 771 2299"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:15Z",
+    "level": "INFO",
+    "service": {"name": "scheduler", "version": "1.0.0", "environment": "prod"},
+    "message": "Job completed"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:16Z",
+    "level": "DEBUG",
+    "service": {"name": "search-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Search executed"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:17Z",
+    "level": "INFO",
+    "service": {"name": "notifications-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Notification sent to sophie.green@example.co.uk"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:18Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Mohammed Ali"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:19Z",
+    "level": "INFO",
+    "service": {"name": "api-gateway", "version": "1.0.0", "environment": "prod"},
+    "message": "Request completed"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:20Z",
+    "level": "INFO",
+    "service": {"name": "support-service", "version": "1.0.0", "environment": "prod"},
+    "message": "User requested callback on 020 8123 4455"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:21Z",
+    "level": "DEBUG",
+    "service": {"name": "cache-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Cache warmup completed"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:22Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Charlotte Evans"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:23Z",
+    "level": "INFO",
+    "service": {"name": "address-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Address lookup completed for postcode LS2 3JD"
+  },
+
+  {
+    "timestamp": "2026-01-24T10:10:24Z",
+    "level": "INFO",
+    "service": {"name": "notifications-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Email sent to liam.patel@gmail.com"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:25Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Liam Patel"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:26Z",
+    "level": "INFO",
+    "service": {"name": "fleet-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Vehicle lookup for registration BT19 RKO"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:27Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Hannah Williams"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:28Z",
+    "level": "INFO",
+    "service": {"name": "support-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Callback requested from +44 7811 222333"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:29Z",
+    "level": "INFO",
+    "service": {"name": "notifications-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Email sent to oliver.jones@mail.com"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:30Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Oliver Jones"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:31Z",
+    "level": "INFO",
+    "service": {"name": "address-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Address lookup completed for postcode NG1 4DT"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:32Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Fatima Hussain"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:33Z",
+    "level": "WARN",
+    "service": {"name": "records-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Record not found for NHS number 771 904 5521"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:34Z",
+    "level": "INFO",
+    "service": {"name": "notifications-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Email sent to noah.smith@example.com"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:35Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Noah Smith"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:36Z",
+    "level": "INFO",
+    "service": {"name": "support-service", "version": "1.0.0", "environment": "prod"},
+    "message": "User requested callback on 0113 555 0199"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:37Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Amelia Clark"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:38Z",
+    "level": "INFO",
+    "service": {"name": "address-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Address lookup completed for postcode CV1 2EP"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:39Z",
+    "level": "INFO",
+    "service": {"name": "notifications-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Email sent to harry.mitchell@gmail.com"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:40Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Harry Mitchell"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:41Z",
+    "level": "INFO",
+    "service": {"name": "fleet-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Vehicle lookup for registration KP68 LZT"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:42Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Priya Shah"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:43Z",
+    "level": "INFO",
+    "service": {"name": "support-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Callback requested from +44 7999 101010"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:44Z",
+    "level": "INFO",
+    "service": {"name": "notifications-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Email sent to jack.turner@mail.co.uk"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:45Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Jack Turner"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:46Z",
+    "level": "INFO",
+    "service": {"name": "address-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Address lookup completed for postcode OX1 3RB"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:47Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Zara Ahmed"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:48Z",
+    "level": "WARN",
+    "service": {"name": "records-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Record not found for NHS number 660 441 9982"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:49Z",
+    "level": "INFO",
+    "service": {"name": "notifications-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Email sent to lucas.king@example.net"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:50Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Lucas King"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:51Z",
+    "level": "INFO",
+    "service": {"name": "support-service", "version": "1.0.0", "environment": "prod"},
+    "message": "User requested callback on 0141 600 8822"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:52Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Isla McDonald"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:53Z",
+    "level": "INFO",
+    "service": {"name": "address-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Address lookup completed for postcode AB10 2QR"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:54Z",
+    "level": "INFO",
+    "service": {"name": "notifications-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Email sent to adam.baker@mail.com"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:55Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Adam Baker"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:56Z",
+    "level": "INFO",
+    "service": {"name": "fleet-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Vehicle lookup for registration GX21 YMD"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:57Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Nina Verma"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:58Z",
+    "level": "INFO",
+    "service": {"name": "support-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Callback requested from +44 7333 889900"
+  },
+  {
+    "timestamp": "2026-01-24T10:10:59Z",
+    "level": "INFO",
+    "service": {"name": "notifications-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Email sent to thomas.reed@example.org"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:00Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Thomas Reed"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:01Z",
+    "level": "INFO",
+    "service": {"name": "address-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Address lookup completed for postcode DE1 1LU"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:02Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Poppy Harris"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:03Z",
+    "level": "WARN",
+    "service": {"name": "records-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Record not found for NHS number 552 118 7740"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:04Z",
+    "level": "INFO",
+    "service": {"name": "notifications-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Email sent to benjamin.ward@gmail.com"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:05Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Benjamin Ward"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:06Z",
+    "level": "INFO",
+    "service": {"name": "support-service", "version": "1.0.0", "environment": "prod"},
+    "message": "User requested callback on 0191 333 4400"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:07Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Arjun Mehta"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:08Z",
+    "level": "INFO",
+    "service": {"name": "address-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Address lookup completed for postcode HA1 4QF"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:09Z",
+    "level": "INFO",
+    "service": {"name": "notifications-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Email sent to ella.robinson@mail.com"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:10Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Ella Robinson"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:11Z",
+    "level": "INFO",
+    "service": {"name": "fleet-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Vehicle lookup for registration LM17 KQW"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:12Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Theo Bennett"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:13Z",
+    "level": "INFO",
+    "service": {"name": "support-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Callback requested from +44 7444 666777"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:14Z",
+    "level": "INFO",
+    "service": {"name": "notifications-service", "version": "1.0.0", "environment": "prod"},
+    "message": "Email sent to ruby.cooper@example.com"
+  },
+  {
+    "timestamp": "2026-01-24T10:11:15Z",
+    "level": "INFO",
+    "service": {"name": "user-service", "version": "1.0.0", "environment": "prod"},
+    "message": "New user created: Ruby Cooper"
+  },
+  {
+  "timestamp": "2026-01-24T11:00:00Z",
+  "level": "INFO",
+  "service": {
+    "name": "api-gateway",
+    "version": "1.2.3",
+    "environment": "prod"
+  },
+  "host": {
+    "hostname": "api-gateway-02",
+    "ip": "10.12.0.21"
+  },
+  "log": {
+    "logger": "http.access",
+    "thread": "http-nio-8080-exec-4"
+  },
+  "trace": {
+    "trace_id": "aabbccddeeff00112233445566778899",
+    "span_id": "0011223344556677"
+  },
+  "correlation_id": "corr-9f3a2c1b",
+  "http": {
+    "method": "GET",
+    "path": "/v1/system/metrics",
+    "status_code": 200,
+    "client_ip": "10.0.0.42",
+    "user_agent": "internal-client/5.0",
+    "latency_ms": 8
+  },
+  "user": {
+    "id": "u-9001",
+    "role": "system"
+  },
+  "data_classification": "internal",
+  "message": "System metrics collected successfully"
+}
+
+]
+
