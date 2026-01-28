@@ -1,3 +1,4 @@
+import re
 from typing import List, TypedDict, Optional
 import copy
 import numpy as np
@@ -69,13 +70,18 @@ class Label(TypedDict):
     text: str
     score: Optional[float]
 
-
+class LabelSets(TypedDict):
+    labels: List[set[str]]
 
 label_dict = {label: {} for label in sorted(LABEL_SET)}
 label_dict_set = {label: set() for label in sorted(LABEL_SET)}
 
+def word_set(text: str):
+    return set(re.findall(r"\w+", str(text).lower()))
+
 class BaseLabels:
     _items: List[Label]
+    _sets: List[set[str]]
     _labels: set[str]
     LABEL_SET = {"PASSWORD",
                  "PERSON",
@@ -96,6 +102,7 @@ class BaseLabels:
     def __init__(self, items: List[Label]):
         self._items = items
         self._labels = { label['label'] for label in items }
+        self._sets = [word_set(label['text']) for label in items]
 
     @property
     def labels(self) -> set[str]:
@@ -147,6 +154,33 @@ class Predictions(BaseLabels):
     def has_entity_np(self, label: Label, translation_dict: dict[str,str]) -> np.int64:
         return np.int64(self.has_entity(label, translation_dict))
 
+def match_greedy(s: np.ndarray, threshold=0.3):
+    y, y_hat = s.shape
+    matched_pred = set()
+    matched_gold = set()
+    matches = []
+
+    pairs = [
+        (i, j, s[i, j])
+        for i in range(y)
+        for j in range(y_hat)
+        if s[i, j] >= threshold
+    ]
+
+    # Sort by similarity descending
+    pairs.sort(key=lambda x: x[2], reverse=True)
+
+    for i, j, score in pairs:
+        if i not in matched_gold and j not in matched_pred:
+            matched_pred.add(i)
+            matched_gold.add(j)
+            matches.append((i, j, score))
+
+    tp = len(matches)
+    fp = y_hat - tp
+    fn = y - tp
+
+    return tp, fp, fn, matches
 
 class Evaluator(Y):
     confusion_matrix: np.ndarray = np.zeros(3).astype(np.int64)
@@ -157,6 +191,29 @@ class Evaluator(Y):
         super().__init__(items)
         self._to_base_labels = {v:k for k,v in dictionary.items()}
         self._label_dictionary = dict(dictionary)
+
+    def jaccard_similarity_matrix(self, predictions: List[Label]) -> np.ndarray:
+        prediction_sets = [word_set(prediction['text']) for prediction in predictions]
+        label_sets = self._sets
+
+        S = np.zeros((len(label_sets), len(prediction_sets)))
+
+        for i, gt in enumerate(label_sets):
+            for j, pred in enumerate(prediction_sets):
+                inter = len(gt & pred)
+                union = len(gt | pred)
+                S[i, j] = inter / union if union else 0.0
+
+        return S
+
+    def evaluate(self, predictions: List[Label]) -> 'Evaluator':
+        matrix = self.jaccard_similarity_matrix(predictions)
+
+        tp, fp, fn, _matches = match_greedy(matrix)
+
+        self.confusion_matrix = np.array([tp, fp, fn]).astype(np.int64)
+
+        return self
 
     def predict(self, predictions_list: List[Label]):
         predictions = Predictions(predictions_list, self._label_dictionary)
@@ -205,7 +262,7 @@ class AggEvaluator:
 
     def predict(self, predictions: pd.DataFrame) -> pd.DataFrame:
         zipped_preds = zip(predictions['labels'], self)
-        predictions['results'] = [eval.predict(pred).confusion_matrix for pred, eval in zipped_preds]
+        predictions['results'] = [eval.evaluate(pred).confusion_matrix for pred, eval in zipped_preds]
 
         return predictions['results']
 
@@ -248,7 +305,7 @@ if __name__ == "__main__":
     }
     evaluator = AggEvaluator.instance(
         dictionary=label_dictionary,
-        labels_path='../data/labels-biased.jsonl'
+        labels_path='../data/labels.jsonl'
     )
     predictions = evaluator.get_predictions('../data/gliner/results.jsonl')
     prediction_scores = evaluator.predict(predictions)
