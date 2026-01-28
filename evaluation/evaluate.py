@@ -180,6 +180,8 @@ def match_greedy(s: np.ndarray, threshold=0.3):
     fp = y_hat - tp
     fn = y - tp
 
+    print(matches)
+
     return tp, fp, fn, matches
 
 class Evaluator(Y):
@@ -305,7 +307,6 @@ if __name__ == "__main__":
     }
     evaluator = AggEvaluator.instance(
         dictionary=label_dictionary,
-        labels_path='../data/labels.jsonl'
     )
     predictions = evaluator.get_predictions('../data/gliner/results.jsonl')
     prediction_scores = evaluator.predict(predictions)

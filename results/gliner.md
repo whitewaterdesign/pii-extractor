@@ -30,17 +30,6 @@ GLiNER seems to find people before it finds emails.
 So it is categorising:
 joe.bloggs@example.com as joe.bloggs -> Person (edited) 
 
-## Looser Evaluation
-
-| Metric | Percentage |
-|--------|------------|
-| Accuracy  | 47.57%        | 
-| Precision    | 52.51%       |
-| Recall    | 83.47%        |
-| F1    | 64.47%    |
-
-These metrics are less useful than they could be.
-What we care about is 
 
 ## Relaxed (Jaccard-based) Evaluation
 
@@ -60,7 +49,34 @@ Jaccard similarity is defined as the size of the intersection divided by the siz
 of the sets of words included in the predicted and gold spans
 We've set the threshold for a match (TP) to be 0.3.
 
+An example of a match:
 
+Log
+```json
+{"timestamp": "2026-01-25T14:18:42.917000Z", "level": "WARN", "service": {"name": "notification-worker", "version": "2.8.3", "environment": "prod"}, "host": {"hostname": "ip-10-42-7-19", "ip": "10.42.7.19"}, "log": {"logger": "com.acme.notify.AlertDispatcher", "thread": "worker-3"}, "trace": {"trace_id": "7f8a6f0e2b8f4c1e9a4b0fd2c6c1a3f2", "span_id": "3b2c1d0e9f8a7b6c", "parent_span_id": "a1b2c3d4e5f60718"}, "correlation_id": "c3b7d2b0-4a8a-4b55-9f3e-1d6f2f1f6a5a", "http": null, "user": null, "event": {"type": "alert_dispatch", "outcome": "deferred", "entity": "email_recipient", "entity_id": null}, "security": {"auth_method": null, "mfa": null}, "data_classification": "confidential", "message": "Alert dispatch deferred due to transient SMTP error; will retry delivery to d.harrington+alerts@proton.me", "extra": null}
+```
+
+Gold standard spans
+```json
+[{"label": "EMAIL_ADDRESS", "text": "d.harrington+alerts@proton.me"}]
+```
+
+Predicted spans
+```json
+[{"text": "email_recipient", "label": "email", "score": 0.9511743187904358}, {"text": "d.harrington", "label": "person", "score": 0.9549511671066284}]
+```
+
+Gold standard set:
+
+$$\{d, harrington, alerts, proton, me\}$$
+
+Predicted set:
+
+$$\{d, harrington\}$$
+
+Jaccard similarity:
+
+$$J(A,B) = \frac{|\{d, harrington\}|}{|\{d, harrington, alerts, proton, me\}|} = 0.4$$
 
 
 
